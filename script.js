@@ -61,4 +61,3 @@ function scrollToTop() {
 
 /* Scroll for IOS */
 
-document.addEventListener('touchstart', handlerFunction, {passive: true});
