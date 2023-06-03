@@ -1,11 +1,11 @@
 
-/* Day&Night Toggle */
-const toggleIcon = document.querySelector('.fa-moon');
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.querySelector('.circle');
 
-toggleIcon.addEventListener('click', () => {
-    toggleIcon.classList.toggle('fa-sun');
+toggleSwitch.addEventListener('change', () => {
     document.body.classList.toggle('day-mode');
 });
+
 /* Day&Night Toggle */
 
 
@@ -38,7 +38,7 @@ gsap.to("progress", {
 
 
 
-/* To Top Buton */
+/* To Top Button */
 
 window.onscroll = function() {scrollFunction()};
 
@@ -56,4 +56,9 @@ function scrollToTop() {
 
 }
 
-/* To Top Buton */
+/* To Top Button */
+
+
+/* Scroll for IOS */
+
+document.addEventListener('touchstart', handlerFunction, {passive: true});
