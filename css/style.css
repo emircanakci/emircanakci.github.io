@@ -415,8 +415,8 @@ section{
 
 .count-container{
     flex: 1 1 42rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -873,7 +873,7 @@ progress::-webkit-progress-value { background-color: var(--main);
 
 /* Media Queries Start */
 
-@media (max-width:1200px) {
+@media only screen and (max-width:1200px) {
     html{
         font-size: 55%;
     }
@@ -885,8 +885,19 @@ progress::-webkit-progress-value { background-color: var(--main);
 
 }
 
+@media only screen and (max-width:992px) {
 
-@media (max-width:768px) {
+    .skills .heading{
+        margin-top: 20vh;
+    }
+
+    .about{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
 
 
     .about .row .btn{
@@ -978,9 +989,22 @@ progress::-webkit-progress-value { background-color: var(--main);
     }
 }
 
-@media (max-width:450px) {
+
+@media only screen and (max-width:600px)  {
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+@media only screen and (max-width:450px) {
     html{
         font-size: 48%;
+    }
+
+    .count-container{
+        display: flex;
+        flex-wrap: wrap;
     }
     
 }
