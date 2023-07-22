@@ -88,19 +88,20 @@
                 </div>
             </div>
 
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form   action="https://formspree.io/f/xwkdprqe"
+            method="POST">
 
                 <div class="inputBox">
-                    <input type="text" placeholder="Name" id="name" required style="--i:7">
-                    <input type="text" placeholder="Number" id="number" required style="--i:8">
+                    <input type="text" placeholder="First Name" name="Name" required style="--i:7">
+                    <input type="text" placeholder="Last Name" name="Last name" required style="--i:8">
                 </div>
 
                 <div class="inputBox">
-                    <input type="email" placeholder="E-mail" id="email" required style="--i:9">
-                    <input type="text" placeholder="Subject" id="subject" required style="--i:10">
+                    <input type="email" placeholder="E-mail" name="Email" required style="--i:9">
+                    <input type="text" placeholder="Phone Number" name="Phone" required style="--i:10">
                 </div>
 
-                <textarea name="message" placeholder="Your Message" id="message" required></textarea>
+                <textarea name="message" placeholder="Your Message" id="Message" required></textarea>
 
                 <input type="submit" value="SEND" class="send">
                 
@@ -129,35 +130,11 @@
 
     <!-- script start -->
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js">
     </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-
-    <script>
-        function sendEmail(){
-            Email.send({
-            SecureToken: "b428ec09-5c96-42b3-818d-04f5dc6e1d26",
-            To : 'emir.canakci@outlook.com',
-            From : 'emir.canakci@outlook.com',
-            Subject : document.getElementById("subject").value,
-            Body : "Name: " + document.getElementById("name").value 
-                    + "<br> Email: "  + document.getElementById("email").value
-                    + "<br> Phone: "  + document.getElementById("number").value
-                    + "<br> Message: "  + document.getElementById("message").value
-
-
-
-        }).then(
-            message => alert("Message sent successfuly : " + message)
-        );
-        }
-    </script>
-
-    <script src="script.js"></script>
 
     <!-- script end -->
 
